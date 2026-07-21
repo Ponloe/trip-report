@@ -97,12 +97,12 @@ export default function TripCard({ trip, index }: TripCardProps) {
                 <tbody>
                   {trip.evaluation.map((row) => (
                     <tr key={row.location}>
-                      <td>{row.location}</td>
-                      <td>{row.customerTraffic}</td>
-                      <td>{row.rentalPotential}</td>
-                      <td>{row.touristPresence}</td>
-                      <td>{row.brandVisibility}</td>
-                      <td>{row.suitability}</td>
+                      <td data-label="Location">{row.location}</td>
+                      <td data-label="Customer Traffic">{row.customerTraffic}</td>
+                      <td data-label="Rental Potential">{row.rentalPotential}</td>
+                      <td data-label="Tourist Presence">{row.touristPresence}</td>
+                      <td data-label="Brand Visibility">{row.brandVisibility}</td>
+                      <td data-label="Suitability">{row.suitability}</td>
                     </tr>
                   ))}
                 </tbody>

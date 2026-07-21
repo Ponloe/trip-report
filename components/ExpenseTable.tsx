@@ -38,16 +38,22 @@ export default function ExpenseTable({ expenses }: ExpenseTableProps) {
         <tbody>
           {expenses.map((expense) => (
             <tr key={expense.item}>
-              <td>{expense.item}</td>
-              <td>{expense.detail}</td>
-              <td className="amount">{formatCurrency(expense.amount)}</td>
+              <td data-label="Expense Category">{expense.item}</td>
+              <td data-label="Business Detail">{expense.detail}</td>
+              <td className="amount" data-label="Estimated Cost">
+                {formatCurrency(expense.amount)}
+              </td>
             </tr>
           ))}
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={2}>Trip Total</td>
-            <td className="amount">{formatCurrency(total)}</td>
+            <td colSpan={2} data-label="Trip Total">
+              Trip Total
+            </td>
+            <td className="amount" data-label="Total">
+              {formatCurrency(total)}
+            </td>
           </tr>
         </tfoot>
       </table>

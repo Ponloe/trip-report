@@ -840,16 +840,20 @@ p {
 
   .site-header {
     display: grid;
+    gap: 12px;
     border-radius: 8px;
   }
 
   .nav-links {
     overflow-x: auto;
+    max-width: 100%;
     padding-bottom: 2px;
+    scrollbar-width: thin;
   }
 
   .hero {
     min-height: auto;
+    padding-block: 56px 40px;
   }
 
   .hero-content,
@@ -866,21 +870,62 @@ p {
     min-height: 300px;
   }
 
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
   .meta-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 128px;
+  }
+
   .site-header,
   .hero,
   .section,
+  .team-hero,
   .site-footer {
     width: min(100% - 20px, 1180px);
   }
 
+  .site-header {
+    top: 8px;
+    margin-top: 8px;
+    padding: 10px;
+  }
+
   .brand {
     min-width: 0;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand strong {
+    font-size: 0.9rem;
+  }
+
+  .brand small {
+    font-size: 0.7rem;
+  }
+
+  .nav-links {
+    gap: 4px;
+    margin-inline: -4px;
+    padding-inline: 4px;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    padding: 9px 11px;
+    font-size: 0.82rem;
   }
 
   .hero-content,
@@ -894,16 +939,68 @@ p {
     padding: 22px;
   }
 
+  .hero {
+    gap: 18px;
+    margin-top: 10px;
+    padding: 30px 0 22px;
+  }
+
+  .hero-media {
+    background:
+      linear-gradient(180deg, rgba(18, 57, 45, 0.94), rgba(18, 57, 45, 0.78) 56%, rgba(18, 57, 45, 0.48)),
+      url("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80") center/cover;
+  }
+
   .hero-summary {
-    margin-inline: 22px;
+    margin-inline: 12px;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2.35rem, 14vw, 3rem);
+    line-height: 1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.18rem;
+  }
+
+  .hero-copy,
+  .team-hero p:not(.eyebrow) {
+    font-size: 0.98rem;
+  }
+
+  .hero-actions,
+  .summary-total,
+  .trip-kicker {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .secondary-report-link {
+    width: 100%;
+    min-height: 46px;
+    padding-inline: 16px;
+    text-align: center;
   }
 
   .section {
     padding-top: 60px;
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .section-heading h2,
+  .final-content h2 {
+    font-size: clamp(1.65rem, 9vw, 2.15rem);
+    line-height: 1.12;
+  }
+
+  .split-heading {
+    gap: 16px;
   }
 
   .site-footer,
@@ -911,14 +1008,157 @@ p {
     display: block;
   }
 
+  .summary-logo {
+    width: 68px;
+    height: 68px;
+  }
+
+  .summary-total strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.65rem;
+  }
+
+  .trip-stack {
+    gap: 18px;
+  }
+
+  .trip-image {
+    min-height: 190px;
+  }
+
+  .trip-image span {
+    bottom: 14px;
+    left: 16px;
+    font-size: 2.7rem;
+  }
+
+  .trip-content h3,
+  .team-card h3 {
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .meta-grid {
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  .meta-grid span {
+    align-items: flex-start;
+    min-height: 0;
+  }
+
+  .report-block {
+    padding-top: 18px;
+  }
+
+  .report-block + .report-block {
+    margin-top: 18px;
+  }
+
+  .table-wrap {
+    overflow: visible;
+    border: 0;
+    background: transparent;
+  }
+
+  .report-table {
+    min-width: 0;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+  }
+
+  .report-table thead {
+    display: none;
+  }
+
+  .report-table,
+  .report-table tbody,
+  .report-table tfoot,
+  .report-table tr,
+  .report-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .report-table tr {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+  }
+
+  .report-table tbody tr:nth-child(even),
+  .report-table tbody tr:hover {
+    background: var(--paper);
+  }
+
+  .report-table td {
+    display: grid;
+    grid-template-columns: minmax(104px, 35%) minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+  }
+
+  .report-table td::before {
+    content: attr(data-label);
+    color: var(--green);
+    font-size: 0.72rem;
+    font-weight: 850;
+    text-transform: uppercase;
+  }
+
+  .report-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .report-table tfoot td {
+    background: var(--paper);
+  }
+
+  .expense-table tfoot td:first-child {
+    display: none;
+  }
+
+  .amount {
+    text-align: left !important;
+  }
+
   .team-grid,
   .team-card {
     grid-template-columns: 1fr;
   }
 
+  .team-hero {
+    gap: 22px;
+    margin-top: 10px;
+    padding-top: 54px;
+  }
+
+  .team-hero h1 {
+    font-size: clamp(2.5rem, 14vw, 3.25rem);
+  }
+
   .avatar {
     width: 100%;
     max-width: 260px;
+  }
+
+  .final-section {
+    gap: 12px;
+    padding-bottom: 60px;
+  }
+
+  .conclusion-grid span {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .total-card strong {
+    font-size: 2.2rem;
   }
 
   .back-to-top {

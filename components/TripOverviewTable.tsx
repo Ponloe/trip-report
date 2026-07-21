@@ -41,20 +41,22 @@ export default function TripOverviewTable({ trips }: TripOverviewTableProps) {
           <tbody>
             {trips.map((trip) => (
               <tr key={trip.title}>
-                <td>
+                <td data-label="Trip">
                   <strong>{trip.destination}</strong>
                   <span className="tag">{trip.tag}</span>
                 </td>
-                <td>{trip.duration}</td>
-                <td>{trip.purpose}</td>
-                <td>
+                <td data-label="Duration">{trip.duration}</td>
+                <td data-label="Purpose">{trip.purpose}</td>
+                <td data-label="Specific Locations">
                   <ul className="compact-list">
                     {trip.locations.map((location) => (
                       <li key={location}>{location}</li>
                     ))}
                   </ul>
                 </td>
-                <td className="amount">{formatCurrency(trip.total)}</td>
+                <td className="amount" data-label="Total">
+                  {formatCurrency(trip.total)}
+                </td>
               </tr>
             ))}
           </tbody>
