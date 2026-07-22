@@ -348,6 +348,13 @@ p {
   gap: 18px;
 }
 
+.profile-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
 .profile-panel,
 .trip-card,
 .total-card {
@@ -373,6 +380,91 @@ p {
 
 .profile-panel p + p {
   margin-top: 14px;
+}
+
+.fact-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.fact-list div {
+  display: grid;
+  gap: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.fact-list div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.fact-list dt {
+  color: var(--green);
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.fact-list dd {
+  margin: 0;
+  color: var(--charcoal);
+  font-weight: 750;
+  line-height: 1.45;
+}
+
+.value-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.value-list li,
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  border-radius: 999px;
+  padding: 7px 11px;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.value-list li {
+  color: #765613;
+  background: #fff5d6;
+  border: 1px solid rgba(199, 154, 59, 0.42);
+}
+
+.profile-link {
+  width: fit-content;
+  margin-top: 18px;
+  color: #fff;
+  background: var(--deep-green);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.profile-link:hover {
+  background: var(--green);
+  transform: translateY(-2px);
+}
+
+.focus-panel {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.focus-panel h3 {
+  margin-top: 0;
 }
 
 .lead-panel {
@@ -831,6 +923,7 @@ p {
   .site-header,
   .split-heading,
   .profile-grid,
+  .profile-detail-grid,
   .hero,
   .team-hero,
   .trip-card,
@@ -842,6 +935,22 @@ p {
     display: grid;
     gap: 12px;
     border-radius: 8px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lead-panel {
+    grid-column: 1 / -1;
+  }
+
+  .profile-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .people-panel {
+    grid-column: 1 / -1;
   }
 
   .nav-links {
@@ -901,6 +1010,26 @@ p {
   .brand {
     min-width: 0;
     gap: 10px;
+  }
+
+  .profile-grid,
+  .profile-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-panel,
+  .people-panel {
+    grid-column: auto;
+  }
+
+  .value-list,
+  .profile-link {
+    width: 100%;
+  }
+
+  .value-list li,
+  .profile-link {
+    justify-content: center;
   }
 
   .brand-logo {
