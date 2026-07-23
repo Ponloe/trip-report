@@ -23,12 +23,12 @@ const trips = [
       "Independence Beach Business Lounge, Sihanoukville",
     ],
     overview:
-      "The Sihanoukville trip focused on investor communication and market access. The team presented Angkor Verde Foods' product portfolio, export packaging concept, and projected demand from hotels, supermarkets, and coastal tourism businesses. Meetings were held with Ms. Lina Sok, managing partner of Harbor Growth Capital, and Mr. Victor Chan, director of Mekong Port Ventures.",
+      "The Sihanoukville trip was organized to meet with two potential investors interested in supporting the company's coastal distribution and export operations. The first meeting was held at Prince Mall Sihanoukville with Mr. Sok Piseth, a logistics and real estate investor with existing warehouse infrastructure near the Sihanoukville Autonomous Port. The second meeting took place at the Independence Beach Business Lounge with Ms. Chan Thida, an investor with an established food distribution network across the coastal provinces.",
     highlights: [
-      "Ms. Lina Sok expressed interest in a minority investment to support a chilled delivery route from Phnom Penh to Sihanoukville and Kampot, with dried fruit gift packs positioned for hotels and airport retail.",
-      "Mr. Victor Chan recommended a port-linked export pilot for dried mango and cashew snack bundles, beginning with small consolidated shipments to Singapore-based specialty retailers.",
-      "At Prince Mall Sihanoukville, the team observed strong evening traffic near cafes and family dining outlets, making the site suitable for seasonal sampling campaigns.",
-      "At Independence Beach Business Lounge, the discussion emphasized export compliance, shelf-life testing, bilingual labeling, and investor reporting standards.",
+      "Mr. Sok Piseth proposed shared warehouse access to reduce Angkor Verde Foods' export logistics costs by an estimated 15 to 20 percent.",
+      "Ms. Chan Thida expressed interest in distributing the company's dried fruit and herbal drink lines through her existing retail network of 30 coastal outlets.",
+      "Both investors requested a formal partnership proposal and updated financial projections within 30 days.",
+      "The team also assessed the two venues themselves as potential future meeting or pop-up retail spaces given their strong foot traffic.",
     ],
     expenses: [
       {
@@ -59,7 +59,7 @@ const trips = [
     ],
     total: 328,
     conclusion:
-      "The trip produced serious investor interest and confirmed that Sihanoukville can support both coastal distribution and an export-oriented pilot. Angkor Verde Foods should submit a formal follow-up proposal with investment terms, a six-month distribution budget, export documentation milestones, and sample sales projections by product category.",
+      "Both meetings confirmed strong investor interest in Angkor Verde Foods' coastal export strategy. Management will prepare a joint warehousing and distribution proposal for Mr. Sok Piseth and a retail partnership agreement for Ms. Chan Thida, with formal follow-up submissions scheduled within one month of the trip.",
   },
   {
     id: "siem-reap",
@@ -80,7 +80,7 @@ const trips = [
       "Taphul Road Commercial Zone",
     ],
     overview:
-      "The Siem Reap trip studied expansion sites through foot-traffic observation, informal retailer conversations, rental comparison, and customer behavior analysis. The main business question was whether Angkor Verde Foods should open a flagship retail store, a smaller kiosk, or a partner display counter in a tourism-heavy market.",
+      "Over five days, the research team evaluated five candidate locations in Siem Reap for a potential flagship store or kiosk: Pub Street, the Old Market area, Angkor Night Market, Siem Reap Riverside, and the Taphul Road commercial zone. Each site was assessed for customer traffic, rental cost, tourist presence, brand visibility, and overall suitability.",
     highlights: [
       "Pub Street showed the highest evening traffic and strongest impulse-purchase potential, especially for premium dried fruit packs and herbal drinks.",
       "Old Market offered strong tourist presence and souvenir purchasing behavior, but narrow aisles and crowded retail conditions may limit brand presentation.",
@@ -176,10 +176,10 @@ const trips = [
       "House No. 18, Sen Monorom Commune, Sen Monorom City, Mondulkiri Province, Cambodia",
     ],
     overview:
-      "The Mondulkiri trip was organized to interview Mr. Dara Vann, a retired production supervisor who helped Angkor Verde Foods improve drying standards, worker training, and quality inspection routines during the company's early growth period. The interview took place at his home address in Sen Monorom City.",
+      "The Mondulkiri trip was conducted to interview Mr. Dara Vann, a retired production supervisor of Angkor Verde Foods Co., Ltd., at his home in Sen Monorom City. Mr. Vann served the company for over 18 years and played a key role in establishing its original dried fruit processing line. The interview was conducted for a feature article in the company's official employee magazine.",
     highlights: [
-      "Mr. Dara described how early production teams learned to reduce fruit waste by sorting mango and pineapple by ripeness before drying.",
-      "He explained that consistent hygiene checklists helped the company win repeat orders from hotels and boutique grocery shops.",
+      "Mr. Vann shared detailed stories about the company's early production challenges, including the introduction of the first solar drying equipment for tropical fruit processing.",
+      "Mr. Vann recalled, ‘We tested every batch by hand before we trusted any machine,’ reflecting the quality-first culture he helped establish.",
       "His most memorable statement was: \"A good product begins with patient hands and honest inspection.\"",
       "The interview gathered photographs, timeline notes, and personal stories for a company magazine feature about employee pride and operational discipline.",
       "The story supports company culture by showing younger staff that quality standards were built through teamwork, responsibility, and respect for Cambodian ingredients.",
